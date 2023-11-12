@@ -9,7 +9,9 @@ export default function Login() {
         <input type="text" placeholder="example John" required></input>
         <label>Password</label>
         <input type="password" required></input>
-        <Link to="payslip">Submit</Link>
+        <Link to="payslip" className="btn btn-lg">
+          Submit
+        </Link>
       </form>
     </div>
   );
