@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -8,7 +9,7 @@ export default function Login() {
         <input type="text" placeholder="example John" required></input>
         <label>Password</label>
         <input type="password" required></input>
-        <button>Submit</button>
+        <Link to="payslip">Submit</Link>
       </form>
     </div>
   );
