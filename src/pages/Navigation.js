@@ -13,6 +13,9 @@ export default function Navigation() {
             <Link to="payslip">Payslip</Link>
           </li>
           <li>
+            <Link to="download">Download Your payslips</Link>
+          </li>
+          <li>
             <Link to="calendar">Calendar</Link>
           </li>
         </ul>
