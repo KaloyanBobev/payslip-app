@@ -16,14 +16,7 @@ export default function DownloadPayslips() {
           <div className="col-md-2">7</div>
           <div className="col-md-2">Monthly</div>
           <div className="col-md-2">27/10/2023</div>
-          <div className="col-md-2">
-            <a href="#" className="">
-              download
-            </a>
-            <a href="#" className="">
-              view
-            </a>
-          </div>
+          <div className="col-md-2"></div>
         </div>
 
         <div className="row border border-info">
@@ -31,14 +24,7 @@ export default function DownloadPayslips() {
           <div className="col-md-2">6</div>
           <div className="col-md-2">Monthly</div>
           <div className="col-md-2">29/9/2023</div>
-          <div className="col-md-2">
-            <a href="#" className="">
-              download
-            </a>
-            <a href="#" className="">
-              view
-            </a>
-          </div>
+          <div className="col-md-2"></div>
         </div>
       </div>
     </div>
