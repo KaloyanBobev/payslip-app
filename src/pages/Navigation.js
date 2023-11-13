@@ -1,10 +1,19 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+
+import Nav from "react-bootstrap/Nav";
 
 export default function Navigation() {
   return (
     <>
-      <nav>
+      <Nav defaultActiveKey="/" className="flex-row">
+        <Nav.Link href="/">Login</Nav.Link>
+        <Nav.Link href="payslip">Payslip</Nav.Link>
+        <Nav.Link href="download">Download Your Payslips</Nav.Link>
+        <Nav.Link href="calendar">Calendar</Nav.Link>
+        <Nav.Link href="details">Details</Nav.Link>
+      </Nav>
+
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">Login</Link>
@@ -20,7 +29,7 @@ export default function Navigation() {
           </li>
         </ul>
       </nav>
-      <Outlet />
+      <Outlet /> */}
     </>
   );
 }
