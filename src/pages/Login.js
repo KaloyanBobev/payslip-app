@@ -6,9 +6,9 @@ export default function Login() {
     <div>
       <form>
         <label>Username</label>
-        <input type="text" placeholder="example John" required></input>
+        <input type="text" placeholder="your username" required></input>
         <label>Password</label>
-        <input type="password" required></input>
+        <input type="password" placeholder="your password" required></input>
         <Link to="payslip" className="btn btn-lg">
           Submit
         </Link>
