@@ -1,8 +1,5 @@
 import React from "react";
 
-export default function
-() {
-  return <div className="container">
-
-  </div>;
+export default function Details() {
+  return <div>Details</div>;
 }
