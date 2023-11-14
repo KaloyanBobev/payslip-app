@@ -17,8 +17,8 @@ function App() {
         <Route path="payslip" element={<Payslip />} />
         <Route path="calendar" element={<CalendarElement />} />
         <Route path="download" element={<DownloadPayslips />} />
-        <Route path="derails" element={<Details />} />
-        <Route path="derails" element={<Details />} />
+        <Route path="details" element={<Details />} />
+        <Route path="security" element={<Security />} />
       </Routes>
     </div>
   );
