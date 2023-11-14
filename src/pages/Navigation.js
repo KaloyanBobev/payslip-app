@@ -11,6 +11,7 @@ export default function Navigation() {
         <Nav.Link href="download">Download Your Payslips</Nav.Link>
         <Nav.Link href="calendar">Calendar</Nav.Link>
         <Nav.Link href="details">Details</Nav.Link>
+        <Nav.Link href="security">Security Details</Nav.Link>
       </Nav>
 
       {/* <nav>
