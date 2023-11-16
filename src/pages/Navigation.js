@@ -1,11 +1,11 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
-// import Nav from "react-bootstrap/Nav";
+// import { Link, Outlet } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
 
 export default function Navigation() {
   return (
     <>
-      {/* <Nav defaultActiveKey="/" className="flex-row">
+      <Nav defaultActiveKey="/" className="flex-row">
         <Nav.Link exact path href="/">
           Login
         </Nav.Link>
@@ -14,9 +14,9 @@ export default function Navigation() {
         <Nav.Link href="calendar">Calendar</Nav.Link>
         <Nav.Link href="details">Details</Nav.Link>
         <Nav.Link href="security">Security Details</Nav.Link>
-      </Nav> */}
+      </Nav>
 
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">Login</Link>
@@ -38,7 +38,7 @@ export default function Navigation() {
           </li>
         </ul>
       </nav>
-      <Outlet />
+      <Outlet />*/}
     </>
   );
 }
