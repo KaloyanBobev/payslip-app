@@ -2,8 +2,8 @@ import React from "react";
 
 export default function DownloadPayslips() {
   return (
-    <div>
-      <h1>Payslips for John Smith</h1>
+    <div className="">
+      <h1 className="centred">Payslips for John Smith</h1>
       <div className="container">
         <div className="row bg-primary">
           <div className="col-md-2">Tax Year</div>
