@@ -3,7 +3,9 @@ import React from "react";
 export default function Payslip() {
   return (
     <div className="container">
-      <h1>Payslip for John Smith for Monthly period 7 2023/2024</h1>
+      <h1 className="">
+        Payslip for John Smith for Monthly period 7 2023/2024
+      </h1>
       <div className="container">
         <div className="row bg-primary">
           <div className="col-md-2">Employee ID</div>
