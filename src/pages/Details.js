@@ -2,7 +2,8 @@ import React from "react";
 
 export default function Details() {
   return (
-    <div className="container">
+    <div className="container center-block">
+      <h1>Employee Details</h1>
       <div className="row">
         <label className="col-md-3 bg-primary">Employee ID</label>
         <div className="col-md-3 border border-primary text-right"> 188765</div>
