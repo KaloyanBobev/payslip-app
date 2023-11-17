@@ -48,3 +48,18 @@ label {
   font-weight: 600;
   color: rgb(34, 34, 34);
 }
+
+.container.page-not{
+  div{
+    margin:10rem auto;
+    a{
+      
+      text-decoration: none;
+    }
+  }
+  img{
+    height: 100%;
+    width: 100%;
+  }
+
+}
