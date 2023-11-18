@@ -14,11 +14,13 @@ export default function Navigation() {
               <Nav.Link exact path href="/">
                 Login
               </Nav.Link>
-              <Nav.Link href="/pages/payslip">Payslip</Nav.Link>
-              <Nav.Link href="/page/download">Download Your Payslips</Nav.Link>
-              <Nav.Link href="/page/calendar">Calendar</Nav.Link>
-              <Nav.Link href="/page/details">Details</Nav.Link>
-              <Nav.Link href="/page/security">Security Detailss</Nav.Link>
+              <Nav.Link href="src/pages/payslip">Payslip</Nav.Link>
+              <Nav.Link href="src/page/download">
+                Download Your Payslips
+              </Nav.Link>
+              <Nav.Link href="src/page/calendar">Calendar</Nav.Link>
+              <Nav.Link href="src/page/details">Details</Nav.Link>
+              <Nav.Link href="src/page/security">Security Detailss</Nav.Link>
 
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Dropdown Item 1</NavDropdown.Item>
