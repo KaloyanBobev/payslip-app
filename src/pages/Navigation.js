@@ -7,7 +7,7 @@ export default function Navigation() {
     <>
       <Navbar bg="primary" expand="md">
         <Container>
-          <Navbar.Brand href="#home">Navbar Brand</Navbar.Brand>
+          <Navbar.Brand href="#home">Over 30s</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
