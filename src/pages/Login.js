@@ -1,10 +1,10 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-// import { useState } from "react";
+import { useState } from "react";
 
 export default function Login() {
-  // const [email, setEmail] = useState("Johnsmith@gmail.com");
+  const [email, setEmail] = useState("0");
 
   return (
     <div>
@@ -13,6 +13,8 @@ export default function Login() {
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="form-group mt-3">
+              <p>you clicked {email} times</p>
+              <button onClick={() => setEmail(email + 1)}>Click me</button>
               <label>Email address</label>
               <input
                 type="email"
