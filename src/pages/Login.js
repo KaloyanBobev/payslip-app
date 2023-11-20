@@ -1,10 +1,12 @@
 import React from "react";
-
+import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Login() {
-  const [email, setEmail] = useState("0");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [visible, setVisible] = useState(false);
 
   return (
     <div>
@@ -13,22 +15,27 @@ export default function Login() {
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="form-group mt-3">
-              <p>you clicked {email} times</p>
-              <button onClick={() => setEmail(email + 1)}>Click me</button>
               <label>Email address</label>
               <input
                 type="email"
                 className="form-control mt-1"
                 placeholder="Enter email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className="form-group mt-3">
+            <div className="form-group mt-3 flex ">
               <label>Password</label>
               <input
-                type="password"
+                type={visible ? "text" : "password"}
                 className="form-control mt-1"
                 placeholder="Enter password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
+              <span className="p-2" onClick={() => setVisible(!visible)}>
+                {visible ? <MdVisibility /> : <MdVisibilityOff />}
+              </span>
             </div>
             <div className="d-grid gap-2 mt-3">
               <button type="submit" className="btn btn-primary">
