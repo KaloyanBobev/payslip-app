@@ -1,7 +1,9 @@
 import React from "react";
-
+// import Navigation from "./Navigation";
 export default function DownloadPayslips() {
   return (
+    <>{/*
+  <Navigation /> */}
     <div className="">
       <h1 className="centred">Payslips for John Smith</h1>
       <div className="container">
@@ -27,6 +29,7 @@ export default function DownloadPayslips() {
           <div className="col-md-2"></div>
         </div>
       </div>
-    </div>
+      </div>
+      </>
   );
 }
