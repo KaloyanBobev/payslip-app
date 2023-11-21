@@ -1,12 +1,16 @@
 import React from "react";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+
+const email1 = "user1@abv.bg";
+const password1 = "pass1";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -15,7 +19,7 @@ export default function Login() {
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="form-group mt-3">
-              <label>Email address</label>
+              <label htmlFor="email">Email address</label>
               <input
                 type="email"
                 className="form-control mt-1"
@@ -34,14 +38,23 @@ export default function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
               <span className="p-2" onClick={() => setVisible(!visible)}>
+                show the password{" "}
                 {visible ? <MdVisibility /> : <MdVisibilityOff />}
               </span>
             </div>
             <div className="d-grid gap-2 mt-3">
-              <button type="submit" className="btn btn-primary">
-                <Link to="payslip" className="btn btn-lg">
-                  Submit
-                </Link>
+              <button
+                type="submit"
+                className="btn btn-primary"
+                onClick={() => {
+                  if (email === email1 && password === password1) {
+                    navigate("/payslip");
+                  } else {
+                    <div>Wrong email or password</div>;
+                  }
+                }}
+              >
+                Submit
               </button>
             </div>
             <p className="forgot-password text-right mt-2">
@@ -50,15 +63,6 @@ export default function Login() {
           </div>
         </form>
       </div>
-      {/* <form>
-        <label>Username</label>
-        <input type="text" placeholder="your username" required></input>
-        <label>Password</label>
-        <input type="password" placeholder="your password" required></input>
-        <Link to="payslip" className="btn btn-lg">
-          Submit
-        </Link>
-      </form> */}
     </div>
   );
 }
