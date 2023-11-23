@@ -1,0 +1,44 @@
+ [
+    {
+        "id":"1",
+        "title":"Mr.",
+        "first_name":"John",
+        "second_name":"Smith",
+        "email":"john@gmail.com",
+        "password":"john1234",
+        "start-date":"21/11/2012",
+        "DOB":"11/01/1990",
+        "NINO":"ST024481B",
+        "PAYE":"A1233",
+        "Current-position":"Front-End Developer",
+        "Status":"Current",
+        "Departament":"IT Depeartament",
+        "Gender":"Male",
+        "Nationality":"British",
+        "Ethinic-Originonality":"British",
+        "Gender-Identity":" ",
+        "Maritial":"Maritial"
+
+    },
+    {
+        "id":"2",
+        "title":"Mrs.",
+        "first_name":"Anna",
+        "second_name":"Down",
+        "email":"adown@gmail.com",
+        "password":"anna1234",
+        "start-date":"21/11/2012",
+        "DOB":"11/01/1990",
+        "NINO":"ST024481B",
+        "PAYE":"Awr43434",
+        "Current-position":"Scrum Master",
+        "Status":"Current",
+        "Departament":"IT Depeartament",
+        "Gender":"Female",
+        "Nationality":"British",
+        "Ethinic-Originonality":"British",
+        "Gender-Identity":" ",
+        "Maritial":"Single"
+
+    }
+]
