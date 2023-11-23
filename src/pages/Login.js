@@ -1,8 +1,8 @@
 import React from "react";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-// import axios from "axios";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const email1 = "user1@abv.bg";
 const password1 = "pass1";
@@ -11,25 +11,29 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
-  // const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   axios
-  //     .get("/db/users.json")
-  //     .then((res) => setUsers(res.data))
-  //     .catch((err) => console.log(err));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("users.json")
+      .then((res) => setUsers(res.data))
+      .catch((err) => console.log(err));
+  }, []);
+
+  // if (email === users.email) {
+  //   console.log(users.id);
+  // }
 
   return (
     <div>
-      {/* <ul>
+      <ul>
         {users.map((user, index) => (
           <li key={index}>
-            #{user.id}: {user.first_name} {user.last_name}
+            #{user.id}: {user.first_name} {user.second_name}
           </li>
         ))}
-      </ul> */}
+      </ul>
       <div className="Auth-form-container">
         <form className="Auth-form">
           <div className="Auth-form-content">
