@@ -1,6 +1,8 @@
+// import the base code from React library
 import React from "react";
 // import Navigation from "./Navigation";
 export default function Payslip() {
+  //JSX part printing all the infomration for the employee
   return (
     <>
       {/* <Navigation /> */}
