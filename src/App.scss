@@ -1,7 +1,8 @@
+//global varebles
 *{
   box-sizing: border-box;
 }
-
+//login form page
 .center-block{
   margin:5rem auto;
 
@@ -48,12 +49,12 @@ label {
   font-weight: 600;
   color: rgb(34, 34, 34);
 }
-
+//Page Not Found page
 .container.page-not{
   div{
     margin:10rem auto;
     a{
-      
+
       text-decoration: none;
     }
   }
