@@ -1,19 +1,24 @@
+// import the base code from React library
 import React from "react";
+//import two icons from react icons
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
+//import useNavigate,useState,useEfect hooks
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+//import axios
 import axios from "axios";
 
 const email1 = "user1@abv.bg";
 const password1 = "pass1";
 
 export default function Login() {
+  //decleare and inicailize a email,password,visible,users varebles
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
-
+  //use hook to do a axios request from local json file
   useEffect(() => {
     axios
       .get("users.json")
@@ -24,7 +29,7 @@ export default function Login() {
   // if (email === users.email) {
   //   console.log(users.id);
   // }
-
+  //return JSX part printing a login form
   return (
     <div>
       <ul>
@@ -57,12 +62,14 @@ export default function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+              {/*create a icon fro viasibility of the password with onClick method */}
               <span className="p-2" onClick={() => setVisible(!visible)}>
                 show the password{" "}
                 {visible ? <MdVisibility /> : <MdVisibilityOff />}
               </span>
             </div>
             <div className="d-grid gap-2 mt-3">
+              {/*submit button with onClick method checking is the entered email and password are match with those in database if is matching rwill redirect to payslip page*/}
               <button
                 type="submit"
                 className="btn btn-primary"
