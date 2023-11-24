@@ -1,5 +1,6 @@
+// import the base code from React library
 import React from "react";
-// import { Link, Outlet } from "react-router-dom";
+//import navigation elements
 import { Nav, Navbar, Container } from "react-bootstrap";
 
 export default function Navigation() {
@@ -7,10 +8,13 @@ export default function Navigation() {
     <>
       <Navbar bg="primary" expand="md">
         <Container>
+          { /*here we add a logo of the company */}
           <Navbar.Brand href="/">Over 30s</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          { /*this will work on small devices like mobile phones and will hide links in hamburger icon */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
+            { /*the links to the pages in the application*/}
               <Nav.Link exact path href="/">
                 Login
               </Nav.Link>
@@ -18,7 +22,7 @@ export default function Navigation() {
               <Nav.Link href="/download">Download Your Payslips</Nav.Link>
               <Nav.Link href="/calendar">Calendar</Nav.Link>
               <Nav.Link href="/details">Details</Nav.Link>
-              <Nav.Link href="security">Security Detailss</Nav.Link>
+              <Nav.Link href="security">Security Details</Nav.Link>
 
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Dropdown Item 1</NavDropdown.Item>
@@ -31,30 +35,6 @@ export default function Navigation() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Login</Link>
-          </li>
-          <li>
-            <Link to="payslip">Payslip</Link>
-          </li>
-          <li>
-            <Link to="download">Download Your payslips</Link>
-          </li>
-          <li>
-            <Link to="calendar">Calendar</Link>
-          </li>
-          <li>
-            <Link to="details">Details</Link>
-          </li>
-          <li>
-            <Link to="security">Security Questions</Link>
-          </li>
-        </ul>
-      </nav>
-      <Outlet />*/}
     </>
   );
 }
