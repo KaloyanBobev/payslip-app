@@ -1,16 +1,23 @@
+// import the base code from React library
 import React from "react";
+//import a useState hook from react
 import { useState } from "react";
+//import a Calendar element and css file
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 // import Navigation from "./Navigation";
+//Calendar function
 export default function CalendarElement() {
+  //assing new varable date and set default new date
   const [date, setDate] = useState(new Date());
+  //return the JSX
   return (
     <>
 {/*
       <Navigation /> */}
       <div className="container">
         <h1>Viewing Holiday Calendar for John Smith</h1>
+        {/*using a ready component from Calendar component */}
         <Calendar
           className="center-block"
           onChange={setDate}
@@ -18,6 +25,7 @@ export default function CalendarElement() {
           selectRange={true}
           defaultView="decade"
         />
+        {/*printing on the screen the tinar operator if condition is done will print a start and end date if is not will show a default date */}
         {date.length > 0 ? (
           <p className="text-center">
             <span className="bold">Start:</span> {date[0].toDateString()}
