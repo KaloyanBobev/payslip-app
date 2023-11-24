@@ -1,7 +1,9 @@
+// import the base code from React library
 import React from "react";
 import { Link } from "react-router-dom";
+//import the image from img folder
 import img01 from "../img/004.jpg";
-
+//JXS part prining a message, picture and redirecting link t home page
 export default function PageNotFound() {
   return (
     <div className="container page-not row">
@@ -14,7 +16,7 @@ export default function PageNotFound() {
         <Link to="/">Return to login page </Link>
       </div>
       <div className="col-md-4">
-        <img src={img01} alt="404 not found amazing " />
+        <img src={img01} alt="404 not found disconected cable" />
       </div>
     </div>
   );
