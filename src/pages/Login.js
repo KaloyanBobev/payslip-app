@@ -3,13 +3,10 @@ import React from "react";
 //import two icons from react icons
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 //import useNavigate,useState,useEfect hooks
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 //import axios
 import axios from "axios";
-
-const email1 = "user1@abv.bg";
-const password1 = "pass1";
 
 export default function Login() {
   //decleare and inicailize a email,password,visible,users varebles
@@ -17,7 +14,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
   const [users, setUsers] = useState([]);
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   //use hook to do a axios request from local json file
   useEffect(() => {
     axios
@@ -26,9 +23,15 @@ export default function Login() {
       .catch((err) => console.log(err));
   }, []);
 
-  // if (email === users.email) {
-  //   console.log(users.id);
-  // }
+  const compareCreditinales = () => {
+    if (email === users.email && password === users.password) {
+      console.log("match!");
+      // navigate("/payslip");
+    } else {
+      console.log("do not match!");
+    }
+  };
+
   //return JSX part printing a login form
   return (
     <div>
@@ -73,13 +76,7 @@ export default function Login() {
               <button
                 type="submit"
                 className="btn btn-primary"
-                onClick={() => {
-                  if (email === email1 && password === password1) {
-                    navigate("/payslip");
-                  } else {
-                    <div>Wrong email or password</div>;
-                  }
-                }}
+                onClick={compareCreditinales()}
               >
                 Submit
               </button>
