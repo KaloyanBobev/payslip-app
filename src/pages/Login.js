@@ -1,49 +1,53 @@
 // import the base code from React library
 import React from "react";
-//import two icons from react icons
-import { MdVisibility, MdVisibilityOff } from "react-icons/md";
+import { MdVisibility, MdVisibilityOff } from "react-icons/md"; //import two icons from react icons
 //import useNavigate,useState,useEfect hooks
-//import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-//import axios
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+import axios from "axios"; //import axios
 
 export default function Login() {
   //decleare and inicailize a email,password,visible,users varebles
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("john@gmail.com");
+  const [password, setPassword] = useState("john1234");
   const [visible, setVisible] = useState(false);
-  const [users, setUsers] = useState([]);
-  //const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const [userId, setUserId] = useState(null); // New state to store the user ID
+  const navigate = useNavigate();
   //use hook to do a axios request from local json file
-  useEffect(() => {
-    axios
-      .get("users.json")
-      .then((res) => setUsers(res.data))
-      .catch((err) => console.log(err));
-  }, []);
 
-  const compareCreditinales = () => {
-    if (email === users.email && password === users.password) {
-      console.log("match!");
-      // navigate("/payslip");
-    } else {
-      console.log("do not match!");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Replace with your actual API endpoint or data source
+      const response = await axios.get("users.json"); // Assuming users.json contains user data
+      const users = response.data;
+
+      const user = users.find(
+        (user) => user.email === email && user.password === password
+      );
+
+      if (user) {
+        // Successfully logged in, redirect to another page
+        setError("");
+        setUserId(user.id); // Store the user ID
+        navigate("/payslip"); // Redirect to the "/payslip" route
+      } else {
+        setError("Invalid email or password");
+      }
+    } catch (error) {
+      console.error("Error fetching user data", error);
+      setError("Error during login");
     }
   };
 
   //return JSX part printing a login form
   return (
     <div>
-      <ul>
-        {users.map((user, index) => (
-          <li key={index}>
-            #{user.id}: {user.first_name} {user.second_name}
-          </li>
-        ))}
-      </ul>
       <div className="Auth-form-container">
-        <form className="Auth-form">
+        <form className="Auth-form" onSubmit={handleSubmit}>
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="form-group mt-3">
@@ -73,11 +77,7 @@ export default function Login() {
             </div>
             <div className="d-grid gap-2 mt-3">
               {/*submit button with onClick method checking is the entered email and password are match with those in database if is matching rwill redirect to payslip page*/}
-              <button
-                type="submit"
-                className="btn btn-primary"
-                onClick={compareCreditinales()}
-              >
+              <button type="submit" className="btn btn-primary">
                 Submit
               </button>
             </div>
@@ -86,6 +86,8 @@ export default function Login() {
             </p>
           </div>
         </form>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        {userId && <p>User ID: {userId}</p>}
       </div>
     </div>
   );
