@@ -48,6 +48,9 @@ export default function Login() {
     <div>
       <div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>
+          {error && (
+            <p className="d-flex justify-content-center text-danger">{error}</p>
+          )}
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="form-group mt-3">
@@ -70,7 +73,10 @@ export default function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
               {/*create a icon fro viasibility of the password with onClick method */}
-              <span className="p-2" onClick={() => setVisible(!visible)}>
+              <span
+                className="p-2 d-flex justify-content-center"
+                onClick={() => setVisible(!visible)}
+              >
                 show the password{" "}
                 {visible ? <MdVisibility /> : <MdVisibilityOff />}
               </span>
@@ -86,7 +92,7 @@ export default function Login() {
             </p>
           </div>
         </form>
-        {error && <p style={{ color: "red" }}>{error}</p>}
+
         {userId && <p>User ID: {userId}</p>}
       </div>
     </div>
