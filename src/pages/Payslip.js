@@ -21,7 +21,7 @@ export default function Payslip() {
         console.error("Error fetching employee data:", error);
       });
   }, []); // Empty dependency array ensures the effect runs only once (on mount)
-
+  console.log(employeeData);
   //JSX part printing all the infomration for the employee
   return (
     <>
@@ -44,10 +44,10 @@ export default function Payslip() {
             </div>
             <div className="row">
               <div className="col-md-2 border border-primary">
-                {employeeData.id}
+                {employeeData[0].id}
               </div>
               <div className="col-md-2 border border-primary">
-                {employeeData.first_name} {employeeData.second_name}
+                {employeeData[0].first_name} {employeeData[0].second_name}
               </div>
               <div className="col-md-2 border border-primary">UWL</div>
               <div className="col-md-2 border border-primary">120/123dsss</div>
