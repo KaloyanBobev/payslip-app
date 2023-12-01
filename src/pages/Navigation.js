@@ -6,14 +6,15 @@ import { Nav, Navbar, Container } from "react-bootstrap";
 export default function Navigation() {
   return (
     <>
-      <Navbar bg="primary" expand="md">
+      <div className="navbar_container">
+      <Navbar bg="primary"  expand="md">
         <Container>
           { /*here we add a logo of the company */}
           <Navbar.Brand href="/">Over 30s</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           { /*this will work on small devices like mobile phones and will hide links in hamburger icon */}
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto ">
             { /*the links to the pages in the application*/}
               <Nav.Link exact path href="/">
                 Login
@@ -35,6 +36,7 @@ export default function Navigation() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      </div>
     </>
   );
 }
