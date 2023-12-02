@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import axios from "axios"; //import axios
+import forgot from "./ForgotPassword";
 
 export default function Login() {
   //decleare and inicailize a email,password,visible,users varebles
@@ -88,7 +89,7 @@ export default function Login() {
               </button>
             </div>
             <p className="forgot-password text-right mt-2">
-              Forgot <a href="./pages/PageNotFound.js">password?</a>
+              Forgot <a href={"forgot"}>password?</a>
             </p>
           </div>
         </form>
