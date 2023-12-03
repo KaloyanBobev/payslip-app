@@ -1,14 +1,13 @@
 // import the base code from React library
 import React from "react";
-// import Navigation from "./Navigation";
+import Navigation from "./Navigation";
 
 export default function Details() {
   return (
     <>
-      {/*
-      <Navigation /> */}
+      <Navigation />
       {/* creating a table for Employee details */}
-      <div className="container center-block">
+      <div className="container">
         <h1>Employee Details</h1>
         <div className="row">
           <label className="col-md-3 bg-primary">Employee ID</label>
