@@ -1,16 +1,23 @@
 import React from "react";
 import { useState } from "react";
+
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setMessage("Email send to reset your password");
   };
   return (
     <div>
       <div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>
-          {<p className="d-flex justify-content-center text-danger"></p>}
+          {message && (
+            <p className="d-flex justify-content-center text-danger">
+              {message}
+            </p>
+          )}
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Forgoten Password</h3>
             <div className="form-group mt-3">
