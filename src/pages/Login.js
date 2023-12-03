@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import axios from "axios"; //import axios
-import forgot from "./ForgotPassword";
 
 export default function Login() {
   //decleare and inicailize a email,password,visible,users varebles
