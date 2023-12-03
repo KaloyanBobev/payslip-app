@@ -2,7 +2,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import Navigation from "./Navigation";
+import Navigation from "./Navigation";
 
 export default function Payslip() {
   // State to store the data from the JSON file
@@ -25,7 +25,7 @@ export default function Payslip() {
   //JSX part printing all the infomration for the employee
   return (
     <>
-      {/* <Navigation /> */}
+      <Navigation />
       <div className="container">
         <h1 className="">
           Payslip for John Smith for Monthly period 7 2023/2024
