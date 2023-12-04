@@ -23,14 +23,14 @@ export default function Security() {
             <p className="d-flex justify-content-left text-danger">{message}</p>
           )}
           <div className="row mb-2">
-            <label className="col-md-2">Change Password</label>
+            <label className="col-md-3">Change Password</label>
             <input
               className="col-md-2 border border-primary"
               type="text"
             ></input>
           </div>
           <div className="row mb-2">
-            <label className="col-md-2">Change Security Question</label>
+            <label className="col-md-3">Change Security Question</label>
             <input
               className="col-md-2 border border-primary"
               type="text"
