@@ -11,10 +11,7 @@ export default function Details() {
         <h1>Employee Details</h1>
         <div className="row">
           <label className="col-md-3 bg-primary">Employee ID</label>
-          <div className="col-md-3 border border-primary text-right">
-            {" "}
-            188765
-          </div>
+          <div className="col-md-3 border border-primary text-right"> 1</div>
           <label className="col-md-3 bg-primary">Start date</label>
           <div className="col-md-3 border border-primary"> 21/11/2012</div>
         </div>
@@ -41,7 +38,7 @@ export default function Details() {
           <div className="col-md-3 border border-primary">ST024481B</div>
         </div>
         <div className="row bg-primary">
-          <h4>Job Details</h4>
+          <h3>Job Details</h3>
         </div>
         <div className="row">
           <label className="col-md-3 bg-primary">Current Position</label>
@@ -56,7 +53,7 @@ export default function Details() {
           <div className="col-md-9 border border-primary">IT Depeartament</div>
         </div>
         <div className="row bg-primary">
-          <h4>Eqaul Ops Datails</h4>
+          <h3>Eqaul Ops Datails</h3>
         </div>
         <div className="row">
           <label className="col-md-3 bg-primary">Gender</label>
