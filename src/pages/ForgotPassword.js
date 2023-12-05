@@ -19,7 +19,7 @@ export default function ForgotPassword() {
             </p>
           )}
           <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Forgoten Password</h3>
+            <h3 className="Auth-form-title">Forgotten Password</h3>
             <div className="form-group mt-3">
               <label htmlFor="email">Email address</label>
               <input
