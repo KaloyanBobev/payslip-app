@@ -40,5 +40,26 @@
         "Gender-Identity":" ",
         "Maritial":"Single"
 
+    },
+    {
+        "id":"3",
+        "title":"Mrs.",
+        "first_name":"Joan",
+        "second_name":"Mist",
+        "email":"joann@gmail.com",
+        "password":"mist1234",
+        "start-date":"21/11/2012",
+        "DOB":"11/01/1990",
+        "NINO":"ST024481B",
+        "PAYE":"Awr43434",
+        "Current-position":"Scrum Master",
+        "Status":"Current",
+        "Departament":"IT Depeartament",
+        "Gender":"Female",
+        "Nationality":"British",
+        "Ethinic-Originonality":"British",
+        "Gender-Identity":" ",
+        "Maritial":"Single"
+
     }
 ]
