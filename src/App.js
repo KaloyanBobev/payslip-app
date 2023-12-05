@@ -16,7 +16,7 @@ function App() {
       {/* <Navigation /> */}
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="payslip" element={<Payslip />} />
+        <Route path="payslip/:userId" element={<Payslip />} />
         <Route path="calendar" element={<CalendarElement />} />
         <Route path="download" element={<DownloadPayslips />} />
         <Route path="details" element={<Details />} />
