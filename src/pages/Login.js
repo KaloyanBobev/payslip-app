@@ -33,7 +33,7 @@ export default function Login() {
         // Successfully logged in, redirect to another page
         setError("");
         setUserId(user.id); // Store the user ID
-        navigate("/payslip"); // Redirect to the "/payslip" route
+        navigate(`/payslip/${user.id}`); // Redirect to the "/payslip" route
       } else {
         setError("Invalid email or password");
       }
