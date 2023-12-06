@@ -33,7 +33,7 @@ export default function ForgotPassword() {
 
             <div className="d-grid gap-2 mt-3">
               {/*submit button with onClick method checking is the entered email and password are match with those in database if is matching rwill redirect to payslip page*/}
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary" >
                 Send Conformation
               </button>
             </div>
