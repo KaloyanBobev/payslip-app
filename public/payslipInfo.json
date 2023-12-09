@@ -1,0 +1,43 @@
+[
+     {
+      "EmployeeID": 1,
+      "EmployeeNames": "John Smith",
+      "Employer": "UWL",
+      "PAYEReference": "120/123dsss",
+      "PayDate": "27/10/2023",
+      "TaxPeriod": 7,
+      "Payments": {
+        "Salary": {
+          "Total": 2010.23
+        }
+      },
+      "Deductions": {
+        "Tax": {
+          "Total": 352.23
+        },
+        "EmployeeNI": {
+          "Total": 123.23
+        },
+        "WorkplacePensionEES": {
+          "Total": 201.11
+        },
+        "Total": 682.57
+      },
+      "YearToDate": {
+        "GrossTaxable": 18203.78,
+        "Tax": 2589.56,
+        "EmployeeNI": 850.13,
+        "EmployerNI": 1356.45
+      },
+      "TaxCode": "1257L",
+      "NINumber": "SE012688A",
+      "NICategory": "A",
+      "HMRCpayID": 1933,
+      "Department": "IT Departament",
+      "OtherPayments": {
+        "EmployerNI": 178.12,
+        "WorkplacePensionESR": 55.12
+      },
+      "NetPay": 2012.33
+    }
+]
