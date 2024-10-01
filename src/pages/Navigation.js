@@ -7,7 +7,7 @@ export default function Navigation() {
   return (
     <>
       <div className="navbar_container">
-        <Navbar bg="primary" expand="md">
+        <Navbar bg="primary" expand="lg">
           <Container>
             {/*here we add a logo of the company */}
             <Navbar.Brand href="/">
