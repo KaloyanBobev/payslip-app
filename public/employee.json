@@ -6,7 +6,7 @@
         "second_name":"Smith",
         "email":"john@gmail.com",
         "password":"john1234",
-        "start-date":"21/11/2012",
+        "start_date":"21/11/2012",
         "DOB":"11/01/1990",
         "NINO":"ST024481B",
         "PAYE":"A1233",
@@ -15,7 +15,7 @@
         "Departament":"IT Depeartament",
         "Gender":"Male",
         "Nationality":"British",
-        "Ethinic-Originonality":"British",
+        "Ethinic_Originonality":"British",
         "Gender-Identity":" ",
         "Maritial":"Maritial"
 
