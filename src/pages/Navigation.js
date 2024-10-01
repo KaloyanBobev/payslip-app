@@ -21,7 +21,7 @@ export default function Navigation() {
                 <Nav.Link exact path href="/">
                   Login
                 </Nav.Link>
-                <Nav.Link href="/payslip">Payslip</Nav.Link>
+                <Nav.Link href="/payslip/:userId">Payslip</Nav.Link>
                 <Nav.Link href="/download">Download Your Payslips</Nav.Link>
                 <Nav.Link href="/calendar">Calendar</Nav.Link>
                 <Nav.Link href="/details">Details</Nav.Link>
