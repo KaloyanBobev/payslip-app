@@ -16,7 +16,7 @@ export default function CalendarElement() {
       <Navigation />
       <div className="container">
         <h1>Viewing Holiday Calendar for John Smith</h1>
-        {/*printing on the screen the tinar operator if condition is done will print a start and end date if is not will show a default date */}
+        {/*printing on the screen the trinar operator if condition is done will print a start and end date if is not will show a default date */}
         {date.length > 0 ? (
           <p className="text-center">
             <span className="bold">Start:</span> {date[0].toDateString()}
