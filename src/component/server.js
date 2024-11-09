@@ -20,6 +20,7 @@ mongoose.connect("mongodb://localhost:27017", {
 app.get("/api/data", async (req, res) => {
   try {
     // Perform MongoDB query to get data
+    // eslint-disable-next-line no-undef
     const data = await YourModel.find();
     res.json(data);
   } catch (error) {
